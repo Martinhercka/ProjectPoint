@@ -1,11 +1,13 @@
 package sk.akademiasovy.point;
 
+import sk.akademiasovy.date.MyDate;
+
 import java.sql.SQLOutput;
 
 /**
  * Created by host on 17.1.2018.
  */
-public class Main {
+public class Main  {
     public static void main(String[] args) {
         Point p1 = new Point(8, 12);
         System.out.println("Point p1 is in " + p1.getQuadrant() + " quadrant");
@@ -52,7 +54,15 @@ public class Main {
         Line line2 = new Line(1, 3, 4, 6);
         System.out.println("Distance between a and b is:" + line1.getLength());
         line2.getMiddlePointOfLine().print();
+       Triangle t1= new Triangle(new Point(3,3),new Point(4,7),new Point(5,3));
+       if(t1.isIsosceles())
+           System.out.println("Triangle is Isosceles");
+       else
+           System.out.println("Triangle isnt isosceles");
 
+       MyDate myDate= new MyDate();
+       myDate.today();
+       myDate.today2();
 
 
     }

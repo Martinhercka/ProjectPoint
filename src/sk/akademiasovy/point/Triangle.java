@@ -1,6 +1,6 @@
 package sk.akademiasovy.point;
 
-public class Triangle
+public class Triangle implements  InterfaceTriangle
 {
     private Point a;
     private Point b;
@@ -8,7 +8,7 @@ public class Triangle
 
 
 
-    public Triangle(Point a,Point b, Point c)
+    public Triangle(Point a, Point b, Point c)
     {
 
         this.a=a;
@@ -47,6 +47,37 @@ public class Triangle
 
   }
 
+    @Override
+    public boolean isRectangular() {
+        if((getSideA()*getSideA()+getSideB()*getSideB()==getSideC()*getSideC()&&getSideB()*getSideB()+getSideC()*getSideC()==getSideA()*getSideA()&&getSideC()*getSideC()+getSideA()+getSideA()==getSideB()*getSideB()))
+
+
+        {
+            return true;
+        }
+        else
+            return false;
+    }
+
+    @Override
+    public boolean isEquilateral() {
+        if(getSideA()==getSideB()&&getSideB()==getSideC())
+        {
+            return true;
+        }
+        else
+            return false;
+    }
+
+    @Override
+    public boolean isIsosceles() {
+       if(getSideA()==getSideC() || getSideA()==getSideB()|| getSideC()==getSideB())
+       {
+           return true;
+       }
+       else
+           return false;
+    }
 
 
 }
