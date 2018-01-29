@@ -2,12 +2,11 @@ package sk.akademiasovy.point;
 
 import sk.akademiasovy.date.MyDate;
 import sk.akademiasovy.other.MyClass;
+import sk.akademiasovy.abstrakt.Person;
 
 import java.sql.SQLOutput;
 
-/**
- * Created by host on 17.1.2018.
- */
+
 public class Main  {
     public static void main(String[] args) {
         Point p1 = new Point(8, 12);
@@ -32,7 +31,7 @@ public class Main  {
         System.out.println(p3.getDistance());
         Point3D p33 = (Point3D) p3;
         //Point3D p34=new Point();
-        ((Point3D) p3).test();  // pretypovanie
+        ((Point3D) p3).test();
 
         Geometry g1;
         g1 = new Point(5, -9);
@@ -65,8 +64,10 @@ public class Main  {
        myDate.today();
        myDate.today2();
 
-       MyClass name = new MyClass();
+        MyClass name = new MyClass();
         System.out.println(name.isEmailValid("janko@mrkva.sk"));
+
+
 
 
     }

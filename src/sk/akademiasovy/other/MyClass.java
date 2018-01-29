@@ -16,7 +16,7 @@ public class MyClass {
         for(i=0;i<email.length();i++){
             Character z=email.charAt(i);
             if(Character.isAlphabetic(z) || Character.isDigit(z) || "-@._".contains(z.toString())){
-                // znak je platny
+
                 if(z.charValue()=='@')
                     countOfAt++;
                 if(countOfAt==2)
