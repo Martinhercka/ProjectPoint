@@ -1,5 +1,7 @@
 package sk.akademiasovy.point;
 
+import sk.akademiasovy.abstrakt.Student;
+import sk.akademiasovy.abstrakt.Teacher;
 import sk.akademiasovy.date.MyDate;
 import sk.akademiasovy.other.MyClass;
 import sk.akademiasovy.abstrakt.Person;
@@ -67,7 +69,18 @@ public class Main  {
         MyClass name = new MyClass();
         System.out.println(name.isEmailValid("janko@mrkva.sk"));
 
+        Person p = new Teacher();
 
+
+        ((Teacher)p).setSalary(2200); //pretypovanie ((nový typ)premenná)
+
+        Person s = new Student();
+        if(s instanceof Teacher)
+        ((Teacher)s).setSalary(2200);
+
+
+        Object ppp= new Student();
+        ((Person)ppp).setAge(58);
 
 
     }
